@@ -1,0 +1,26 @@
+/* gradient animations generated from https://www.gradient-animator.com/ */
+
+body::before {
+    background-image: linear-gradient(135deg, #eb9378, #21a1eb, #61ec91);
+    background-size: 400% 400%;
+
+    -webkit-animation: mint 33s ease infinite;
+    -moz-animation: mint 33s ease infinite;
+    animation: mint 33s ease infinite;
+}
+
+@-webkit-keyframes mint {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes mint {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes mint {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
