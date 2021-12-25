@@ -32,7 +32,7 @@
         var mainDiv = document.getElementById('main');
         var sections = mainDiv.getElementsByTagName('section');
         for (var i = 0; i < sections.length; ++i) {
-            validSectionNames.push('#' + sections[i].replace('-section', ''));
+            validSectionNames.push('#' + sections[i].id.replace('-section', ''));
         }
 
         updateButtonLabel(window.location.href);
