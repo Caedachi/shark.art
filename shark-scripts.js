@@ -22,6 +22,7 @@
         if (newLabel.includes('#home')) {
             newLabel = newLabel.replace('#home', '#');
         }
+        newLabel = newLabel.replace('https://', '').replace('http://');
     
         // finally set the label
         label.innerHTML = newLabel;
