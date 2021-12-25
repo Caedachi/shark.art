@@ -1,6 +1,6 @@
 (function() {
     var title = '• WELCOME TO THE SHARK ZONE '.replaceAll(' ', '\xa0');
-    var validSectionNames = [];
+    var validSectionNames = [''];
 
     function scrollTitle() {
         title = title.slice(2) + title.slice(0, 2);
@@ -41,10 +41,10 @@
         setInterval(scrollTitle, 1000);
     }
 
-    window.onhashchange = function(e) {
+    window.onhashchange = function(event) {
         var hash = location.hash;
         if (validSectionNames.includes(hash)) {
-            updateButtonLabel(e.newURL);
+            updateButtonLabel(event.newURL);
         }
     }
 })();
