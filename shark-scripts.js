@@ -22,7 +22,8 @@
         if (newLabel.includes('#home')) {
             newLabel = newLabel.replace('#home', '#');
         }
-        newLabel = newLabel.replace('https://', '').replace('http://');
+        // remove protocol
+        newLabel = newLabel.replace('https://', '');
     
         // finally set the label
         label.innerHTML = newLabel;
@@ -33,7 +34,7 @@
         var mainDiv = document.getElementById('main');
         var sections = mainDiv.getElementsByTagName('section');
         for (var i = 0; i < sections.length; ++i) {
-            validSectionNames.push('#' + sections[i].id.replace('-section', ''));
+            validSectionNames.push(`#${sections[i].id.replace('-section', '')}`);
         }
 
         updateButtonLabel(window.location.href);
@@ -43,8 +44,10 @@
 
     window.onhashchange = function(event) {
         var hash = location.hash;
-        if (validSectionNames.includes(hash)) {
-            updateButtonLabel(event.newURL);
+        var newURL = event.newURL;
+        if (!validSectionNames.includes(hash)) {
+            newURL = newURL.replace(hash, '#home');
         }
+        updateButtonLabel(newURL);
     }
 })();
