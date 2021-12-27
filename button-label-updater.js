@@ -49,4 +49,3 @@ var buttonLabelUpdater = (function() {
     }
 })();
 
-buttonLabelUpdater.setup('buttons01');
