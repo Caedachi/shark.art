@@ -25,17 +25,14 @@ var buttonLabelUpdater = (function() {
 
     return {
         setup: function(buttonId) {
-            window.addEventListener('load', function() {
-                // find all valid section names
-                var mainDiv = document.getElementById('main');
-                var sections = mainDiv.getElementsByTagName('section');
-                for (var i = 0; i < sections.length; ++i) {
-                    validSectionNames.push(`#${sections[i].id.replace('-section', '')}`);
-                }
-        
-                updateButtonLabel(buttonId, window.location.href);
-            });
-        
+            // find all valid section names
+            var mainDiv = document.getElementById('main');
+            var sections = mainDiv.getElementsByTagName('section');
+            for (var i = 0; i < sections.length; ++i) {
+                validSectionNames.push(`#${sections[i].id.replace('-section', '')}`);
+            }
+
+            updateButtonLabel(buttonId, window.location.href);
             window.addEventListener('hashchange', function(event) {
                 var hash = location.hash;
                 var newURL = event.newURL;
@@ -49,4 +46,6 @@ var buttonLabelUpdater = (function() {
     }
 })();
 
-buttonLabelUpdater.setup('button01');
+window.addEventListener('load', function() {
+    buttonLabelUpdater.setup('button01');
+})
