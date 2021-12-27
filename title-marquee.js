@@ -1,4 +1,4 @@
-var titleMarquee = (function() {
+(function() {
     var title = '• WELCOME TO THE SHARK ZONE '.replaceAll(' ', '\xa0');
 
     function scrollTitle() {
@@ -6,14 +6,8 @@ var titleMarquee = (function() {
         document.title = title;
     }
 
-    return {
-        setup: function() {
-            window.addEventListener('load', function() {
-                scrollTitle();
-                setInterval(scrollTitle, 1000);
-            });
-        }
-    }
+    window.addEventListener('load', function() {
+        scrollTitle();
+        setInterval(scrollTitle, 1000);
+    });
 })();
-
-titleMarquee.setup();
