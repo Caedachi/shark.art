@@ -1,26 +1,26 @@
 /* gradient animations generated from https://www.gradient-animator.com/ */
 
 body::before {
-    background-image: linear-gradient(135deg, #eb9378, #21a1eb, #61ec91);
-    background-size: 400% 400%;
+    background: linear-gradient(135deg, #302466, #4f3a8b, #ad6a99, #e98790, #f1b49e);
+    background-size: 1000% 1000%;
 
-    -webkit-animation: mint 33s ease infinite;
-    -moz-animation: mint 33s ease infinite;
-    animation: mint 33s ease infinite;
+    -webkit-animation: your-favourite-sunset 33s ease infinite;
+    -moz-animation: your-favourite-sunset 33s ease infinite;
+    animation: your-favourite-sunset 33s ease infinite;
 }
 
-@-webkit-keyframes mint {
-    0%{background-position:0% 51%}
+@-webkit-keyframes your-favourite-sunset {
+    0%{background-position:0% 50%}
     50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
+    100%{background-position:0% 50%}
 }
-@-moz-keyframes mint {
-    0%{background-position:0% 51%}
+@-moz-keyframes your-favourite-sunset {
+    0%{background-position:0% 50%}
     50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
+    100%{background-position:0% 50%}
 }
-@keyframes mint {
-    0%{background-position:0% 51%}
+@keyframes your-favourite-sunset {
+    0%{background-position:0% 50%}
     50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
+    100%{background-position:0% 50%}
 }
